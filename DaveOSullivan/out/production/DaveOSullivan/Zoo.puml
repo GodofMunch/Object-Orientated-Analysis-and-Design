@@ -1,0 +1,44 @@
+@startuml
+
+Class Zoo
+
+abstract Class Animal{
+-name:String
+-age:int
+-gender:String
+-weightPounds:int
+
++eat()
++sleep()
+}
+abstract Class Bird{
++fly()
+}
+
+Class Fish {
++ sleep()
+}
+
+Class Chicken{
++fly()
+}
+
+Class Swallow{
++fly()
+}
+
+interface iFlyable{
++fly()
+}
+
+Zoo "1" --> "0.." Animal : has
+Animal <|-- Bird
+Animal <|-- Fish
+
+Bird <|-- Chicken
+Bird <|-- Swallow
+
+iFlyable <|-- Bird
+
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+Class Die{
+-faceValue: int
+
++ roll()
++ getFaceValue()
+}
+
+Class DiceGame {
+
+}
+
+DiceGame --> "2..2" Die :"requires"
+
+@enduml
